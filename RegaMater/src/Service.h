@@ -40,15 +40,16 @@ public:
 
 	void SetMoisture(int moisture)
 	{
+		Serial.println(moisture);
 		this->display->SetMoisture(moisture);
 
 		//maior que 20 paa não ligar  fora da terra
-		if (moisture > 20 && moisture < 100)
+		if (moisture > 20 && moisture < 350)
 		{
-			this->Irrigate();
 			DateTime date = this->dateTime->Now();
 			if (date.hour() > 16 && date.hour() < 8)
 			{
+				this->Irrigate();
 			}
 		}
 	}

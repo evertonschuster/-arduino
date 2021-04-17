@@ -10,6 +10,7 @@ public:
 		if (rtc.begin())
 		{
 		}
+		//rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); //CAPTURA A DATA E HORA EM QUE O SKETCH É COMPILADO
 
 		// Comment out below lines once you set the date & time.
 		// Following line sets the RTC to the date & time this sketch was compiled

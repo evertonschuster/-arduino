@@ -54,19 +54,5 @@ public:
 		File file = this->openFile();
 		file.println("[Irrigate] OFF " + date.timestamp(DateTime::TIMESTAMP_FULL));
 		file.close();
-
-		File myFile = SD.open(fileName);
-		if (myFile)
-		{
-			Serial.println("test.txt:");
-
-			// read from the file until there's nothing else in it:
-			while (myFile.available())
-			{
-				Serial.write(myFile.read());
-			}
-			// close the file:
-			myFile.close();
-		}
 	}
 };
